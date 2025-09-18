@@ -1,0 +1,36 @@
+[project]
+name = "harp"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "toni.eliseev",email = "toni.eliseev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click (>=8.3.0,<9.0.0)",
+    "pysam (>=0.23.3,<0.24.0)",
+    "pytest (>=8.4.2,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "harp", from = "src"}]
+
+[tool.poetry.scripts]
+harp = "harp.harp:cli"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.3.0"
+

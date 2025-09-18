@@ -1,0 +1,3 @@
+[submodule "specification"]
+	path = specification
+	url = https://github.com/oxygen311/test-task-hap-counter.git
